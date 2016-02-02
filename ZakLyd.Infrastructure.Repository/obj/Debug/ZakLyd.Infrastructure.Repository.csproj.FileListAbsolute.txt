@@ -1,0 +1,14 @@
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\bin\Debug\ZakLyd.Infrastructure.Repository.dll.config
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\bin\Debug\ZakLyd.Infrastructure.Repository.dll
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\bin\Debug\ZakLyd.Infrastructure.Repository.pdb
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\bin\Debug\EntityFramework.dll
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\bin\Debug\ZakLyd.Domaine.Entities.dll
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\bin\Debug\ZakLyd.Domaine.Entities.pdb
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\bin\Debug\EntityFramework.xml
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\bin\Debug\fr\EntityFramework.resources.dll
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\obj\Debug\ZakLyd.Infrastructure.Repository.csprojResolveAssemblyReference.cache
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\obj\Debug\ZakLyd.Infrastructure.Repository.dll
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd.Infrastructure.Repository\obj\Debug\ZakLyd.Infrastructure.Repository.pdb
