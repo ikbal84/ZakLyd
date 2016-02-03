@@ -1,5 +1,5 @@
 # Ignore le contenu des reps
-.[VSvs]/*
+.vs/*
 *tmp/*
 *cache/*
 
