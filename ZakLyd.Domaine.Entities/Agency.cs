@@ -22,7 +22,8 @@ namespace ZakLyd.Domaine.Entities
         public string Email1 {get; set;}
         public string Email2 { get; set; }
         public string Email3 { get; set; }
-        public ICollection<Media> ImageList { get; set; }
+        public ICollection<Media> MediaList { get; set; }
+        public ICollection<Announcment> AnnouncementList { get; set; }
 
     }
 }
