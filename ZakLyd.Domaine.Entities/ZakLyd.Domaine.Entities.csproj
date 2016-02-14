@@ -60,6 +60,7 @@
     <Compile Include="enum\CommentStatus.cs" />
     <Compile Include="enum\MediaType.cs" />
     <Compile Include="enum\PropertyGroup.cs" />
+    <Compile Include="enum\SubscriptionType.cs" />
     <Compile Include="HotelDetail.cs" />
     <Compile Include="Hotel.cs" />
     <Compile Include="Media.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Step.cs" />
+    <Compile Include="Subscription.cs" />
     <Compile Include="Trip.cs" />
     <Compile Include="Visitor.cs" />
   </ItemGroup>

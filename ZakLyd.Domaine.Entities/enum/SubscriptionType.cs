@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ZakLyd.Domaine.Entities
 {
-    public enum MediaType
+    public enum SubscriptionType
     {
-        Image = 0, Video = 1
-
+        Base = 0, Silver = 1, Gold = 2
     }
 }
