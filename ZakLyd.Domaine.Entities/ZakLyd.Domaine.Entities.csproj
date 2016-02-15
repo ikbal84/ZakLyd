@@ -49,17 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ToApprouveEntity.cs" />
+    <Compile Include="Abstract\TrackedEntity.cs" />
     <Compile Include="Address.cs" />
     <Compile Include="Agency.cs" />
     <Compile Include="Agent.cs" />
     <Compile Include="AirPlaneInformation.cs" />
     <Compile Include="Announcment.cs" />
     <Compile Include="Comment.cs" />
+    <Compile Include="CommercialOffer.cs" />
     <Compile Include="Currency.cs" />
     <Compile Include="enum\AgentRole.cs" />
     <Compile Include="enum\CommentStatus.cs" />
+    <Compile Include="enum\CommercialOfferType.cs" />
     <Compile Include="enum\MediaType.cs" />
     <Compile Include="enum\PropertyGroup.cs" />
+    <Compile Include="enum\SubscriptionAction.cs" />
+    <Compile Include="enum\SubscriptionStatus.cs" />
     <Compile Include="enum\SubscriptionType.cs" />
     <Compile Include="HotelDetail.cs" />
     <Compile Include="Hotel.cs" />
@@ -67,8 +73,17 @@
     <Compile Include="Pricing.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefData\TrefAgentRole.cs" />
+    <Compile Include="RefData\TrefCommentStatus.cs" />
+    <Compile Include="RefData\TrefCommercialOfferType.cs" />
+    <Compile Include="RefData\TrefMediaType.cs" />
+    <Compile Include="RefData\TrefPropertyGroup.cs" />
+    <Compile Include="RefData\TrefSubscriptionAction.cs" />
+    <Compile Include="RefData\TrefSubscriptionStatus.cs" />
+    <Compile Include="RefData\TrefSubscriptionType.cs" />
     <Compile Include="Step.cs" />
     <Compile Include="Subscription.cs" />
+    <Compile Include="AgencyAccountHistory.cs" />
     <Compile Include="Trip.cs" />
     <Compile Include="Visitor.cs" />
   </ItemGroup>
@@ -76,6 +91,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

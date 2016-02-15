@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ZakLyd.Domaine.Entities;
-using ZakLyd.Infrastructure.Repository;
+
 
 namespace ZakLyd.Controllers
 {
@@ -12,13 +12,6 @@ namespace ZakLyd.Controllers
     {
         public ActionResult Index()
         {
-            using (var ctx = new ZakLydContext())
-            {
-                Agency agence = new Agency() { AgencyName = "test"};
-
-                ctx.Agency.Add(agence);
-                ctx.SaveChanges();
-            }
             return View();
         }
 

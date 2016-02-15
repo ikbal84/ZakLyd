@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ZakLyd.Domaine.Entities
 {
-    public enum AgentRole
+    public enum SubscriptionStatus
     {
-        Owner = 0, Administrator = 1, Editor = 2, Reader = 3 
+        Activated = 0, Disables = 1, Expired = 2
     }
 }

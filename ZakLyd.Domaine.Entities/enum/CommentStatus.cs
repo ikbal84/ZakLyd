@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZakLyd.Domaine.Entities
 {
-    public enum CommentStatus
+    public enum ApprouvalStatus
     {
         Init = 0, InProcessing = 1, Approuved = 2, Disaprouved = 3
     }
