@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ZakLyd.Domaine.Entities.Abstract;
+using ZakLyd.Domaine.Entities.History;
 
 namespace ZakLyd.Domaine.Entities
 {
@@ -29,5 +30,6 @@ namespace ZakLyd.Domaine.Entities
         public Address Address { get; set; }
         [Required]
         public AgentRole Role { get; set; }
+        public ICollection<AgentHistory> HistoryList { get; set; }
     }
 }

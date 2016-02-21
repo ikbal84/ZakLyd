@@ -53,6 +53,7 @@
     <Compile Include="Abstract\TrackedEntity.cs" />
     <Compile Include="Address.cs" />
     <Compile Include="Agency.cs" />
+    <Compile Include="History\AgencyHistory.cs" />
     <Compile Include="Agent.cs" />
     <Compile Include="AirPlaneInformation.cs" />
     <Compile Include="Announcment.cs" />
@@ -62,11 +63,16 @@
     <Compile Include="enum\AgentRole.cs" />
     <Compile Include="enum\CommentStatus.cs" />
     <Compile Include="enum\CommercialOfferType.cs" />
+    <Compile Include="enum\MediaGroup.cs" />
     <Compile Include="enum\MediaType.cs" />
     <Compile Include="enum\PropertyGroup.cs" />
     <Compile Include="enum\SubscriptionAction.cs" />
     <Compile Include="enum\SubscriptionStatus.cs" />
     <Compile Include="enum\SubscriptionType.cs" />
+    <Compile Include="History\AgentHistory.cs" />
+    <Compile Include="History\AnnouncmentHistory.cs" />
+    <Compile Include="History\HotelDetailHistory.cs" />
+    <Compile Include="History\HotelHistory.cs" />
     <Compile Include="HotelDetail.cs" />
     <Compile Include="Hotel.cs" />
     <Compile Include="Media.cs" />
@@ -76,6 +82,7 @@
     <Compile Include="RefData\TrefAgentRole.cs" />
     <Compile Include="RefData\TrefCommentStatus.cs" />
     <Compile Include="RefData\TrefCommercialOfferType.cs" />
+    <Compile Include="RefData\TRefMediaGroup.cs" />
     <Compile Include="RefData\TrefMediaType.cs" />
     <Compile Include="RefData\TrefPropertyGroup.cs" />
     <Compile Include="RefData\TrefSubscriptionAction.cs" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using ZakLyd.Domaine.Entities.Abstract;
+using ZakLyd.Domaine.Entities.History;
 
 namespace ZakLyd.Domaine.Entities
 {
@@ -26,5 +27,7 @@ namespace ZakLyd.Domaine.Entities
         public ICollection<Properties> PropertyList { get; set; }
         public ICollection<HotelDetail> HotelDetailList { get; set; }
         public ICollection<Media> MediaList { get; set; }
+        public ICollection<Announcment> AnnouncmentList { get; set; }
+        public ICollection<HotelHistory> HistoryList { get; set; }
     }
 }

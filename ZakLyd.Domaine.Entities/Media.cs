@@ -16,6 +16,8 @@ namespace ZakLyd.Domaine.Entities
         [Required]
         public MediaType Type { get; set; }
         [Required]
+        public MediaGroup MediaGroup { get; set; }
+        [Required]
         public string MediaTitle { get; set; }
         public string MediaDescription { get; set; }
         [Required]

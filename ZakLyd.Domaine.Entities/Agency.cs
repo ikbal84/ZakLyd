@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ZakLyd.Domaine.Entities.Abstract;
+using ZakLyd.Domaine.Entities.History;
 
 namespace ZakLyd.Domaine.Entities
 {
@@ -54,5 +55,6 @@ namespace ZakLyd.Domaine.Entities
         public ICollection<CommercialOffer> CommercialOffersListe { get; set; }
         public ICollection<Agent> AgentList { get; set; }
         public ICollection<Comment> CommentList { get; set; }
+        public ICollection<AgencyHistory> HistoryList { get; set; }
     }
 }

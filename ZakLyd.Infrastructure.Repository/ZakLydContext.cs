@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ZakLyd.Domaine.Entities;
+using ZakLyd.Domaine.Entities.History;
 using ZakLyd.Domaine.Entities.RefData;
 
 namespace ZakLyd.Infrastructure.DAL
 {
-    public class ZakLydContext : DbContext 
+    public class ZakLydContext : DbContext
     {
-        public ZakLydContext(): base("name=DBConnection")
+        public ZakLydContext() : base("name=DBConnection")
         {
 
         }
@@ -42,5 +43,36 @@ namespace ZakLyd.Infrastructure.DAL
         public DbSet<TrefSubscriptionAction> SubscriptionAction { get; set; }
         public DbSet<TrefSubscriptionStatus> SubscriptionStatus { get; set; }
         public DbSet<TrefSubscriptionType> SubscriptionType { get; set; }
+        public DbSet<TRefMediaGroup> MediaGroup { get; set; }
+
+        //History Tables
+        public DbSet<AgencyHistory> AgencyHistory { get; set; }
+        public DbSet<AgentHistory> AgentHistory { get; set; }
+        public DbSet<AnnouncmentHistory> AnnouncmentHistory { get; set; }
+        public DbSet<HotelDetailHistory> HotelDetailHistory { get; set; }
+        public DbSet<HotelHistory> HotelHistory { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Hotel>()
+                .HasMany(p => p.AnnouncmentList)
+                .WithMany(t => t.HotelList)
+                .Map(mc =>
+                {
+                    mc.ToTable("AnnouncmentHotel", "zaklyd");
+                    mc.MapLeftKey("AnnouncmentId");
+                    mc.MapRightKey("HotelId");
+                });
+
+            modelBuilder.Entity<HotelDetail>()
+                .HasMany(p => p.AnnouncmentList)
+                .WithMany(t => t.HotelDetailList)
+                .Map(mc =>
+                {
+                    mc.ToTable("AnnouncmentHotelDetail", "zaklyd");
+                    mc.MapLeftKey("AnnouncmentId");
+                    mc.MapRightKey("HotelDetailId");
+                });
+        }
     }
 }

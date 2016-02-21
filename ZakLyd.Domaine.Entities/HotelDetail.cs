@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ZakLyd.Domaine.Entities.Abstract;
+using ZakLyd.Domaine.Entities.History;
 
 namespace ZakLyd.Domaine.Entities
 {
@@ -17,9 +18,13 @@ namespace ZakLyd.Domaine.Entities
         [Required]
         public string RoomType { get; set; }
         [Required]
+        public Hotel Hotel { get; set; }
+        [Required]
         public int Capacity { get; set; }
         [DataType(DataType.Html)]
         public string Description { get; set; }
         public ICollection<Media> MediaList { get; set; }
+        public ICollection<Announcment> AnnouncmentList { get; set; }
+        public ICollection<HotelDetailHistory> HistoryList { get; set; }
     }
 }

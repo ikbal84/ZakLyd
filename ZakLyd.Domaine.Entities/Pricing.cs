@@ -9,7 +9,7 @@ using ZakLyd.Domaine.Entities.Abstract;
 
 namespace ZakLyd.Domaine.Entities
 {
-    [Table("Pricing", Schema = "pricing")]
+    [Table("Pricing", Schema = "zaklyd")]
     public class Pricing : TrackedEntity
     {
         [Key]
