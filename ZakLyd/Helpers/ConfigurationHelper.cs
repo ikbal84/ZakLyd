@@ -26,14 +26,34 @@ namespace ZakLyd.Helpers
                 var configs = confManager.GetConfigurations();
 
                 string configValue = String.Empty;
-                configs.TryGetValue(key, out configValue);
-                return configValue;
+                if (configs.TryGetValue(key, out configValue))
+                {
+                    return configValue;
+                }
+                else
+                {
+                    return GetConfigurationFromFile(key);
+                }
             }
             else
             {
                 return confValue.ToString();
             }
 
+
+        }
+
+        public static string GetConfigurationFromFile(string key)
+        {
+            try
+            {
+                return System.Configuration.ConfigurationManager.AppSettings[key];
+            }
+            catch(Exception e)
+            {
+                return String.Empty;
+            }
+            
 
         }
     }
