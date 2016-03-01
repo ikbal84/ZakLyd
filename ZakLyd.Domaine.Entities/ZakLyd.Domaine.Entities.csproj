@@ -53,6 +53,10 @@
     <Compile Include="Abstract\TrackedEntity.cs" />
     <Compile Include="Address.cs" />
     <Compile Include="Agency.cs" />
+    <Compile Include="Configuration\Configuration.cs" />
+    <Compile Include="Configuration\Culture.cs" />
+    <Compile Include="Configuration\Label.cs" />
+    <Compile Include="Configuration\LabelCulture.cs" />
     <Compile Include="History\AgencyHistory.cs" />
     <Compile Include="Agent.cs" />
     <Compile Include="AirPlaneInformation.cs" />

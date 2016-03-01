@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ZakLyd.Domaine.Entities;
+using ZakLyd.Domaine.Entities.Configuration;
 using ZakLyd.Domaine.Entities.History;
 using ZakLyd.Domaine.Entities.RefData;
 
@@ -52,6 +53,12 @@ namespace ZakLyd.Infrastructure.DAL
         public DbSet<HotelDetailHistory> HotelDetailHistory { get; set; }
         public DbSet<HotelHistory> HotelHistory { get; set; }
 
+        //Configuration
+        public DbSet<Configuration> Configuration { get; set; }
+        public DbSet<Culture> Culture { get; set; }
+        public DbSet<Label> Label { get; set; }
+        public DbSet<LabelCulture> LabelCulture { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Hotel>()
@@ -73,6 +80,8 @@ namespace ZakLyd.Infrastructure.DAL
                     mc.MapLeftKey("AnnouncmentId");
                     mc.MapRightKey("HotelDetailId");
                 });
+
+
         }
     }
 }
