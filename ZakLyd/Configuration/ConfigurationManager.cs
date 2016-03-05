@@ -20,7 +20,9 @@ namespace ZakLyd.Configuration
         public IDictionary<string, string> GetLabelsByFamily(string labelFamily, string culture)
         {
             //get Configuration from DataBase
-            return _configurationRepo.GetLabelsByFamily(labelFamily, culture);
+            //return _configurationRepo.GetLabelsByFamily(labelFamily, culture);
+
+            return new Dictionary<string, string> { { "Test.test0", "un test" } };
         }
 
         public IDictionary<string, string> GetConfigurations()

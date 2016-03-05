@@ -19,6 +19,8 @@ namespace ZakLyd
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             new ZakLydDBInitializer().InitializeDatabase(new ZakLydContext());
+
         }
+
     }
 }

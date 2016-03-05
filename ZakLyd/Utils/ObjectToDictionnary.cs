@@ -10,6 +10,11 @@ namespace ZakLyd.Utils
     {
         public  IDictionary<string, object> ObjectToDictionary<T>(T item) where T : class
         {
+            if(item == null)
+            {
+                return null;
+            }
+
             Type myObjectType = item.GetType();
             IDictionary<string, object> dict = new Dictionary<string, object>();
             var indexer = new object[0];

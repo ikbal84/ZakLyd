@@ -28,6 +28,20 @@ namespace ZakLyd.Caching
             }
         }
 
+        public Tuple<bool,string> Flush()
+        {
+            try
+            {
+                _cache.Dispose();
+                return Tuple.Create<bool, string>(true, string.Empty);
+            }
+            catch(Exception e)
+            {
+                return Tuple.Create<bool, string>(false, e.Message);
+            }
+            
+        }
+
         private CacheItemPolicy SetCachePolicy(int cacheTime = 1500)
         {
             CacheItemPolicy policy = new CacheItemPolicy();
