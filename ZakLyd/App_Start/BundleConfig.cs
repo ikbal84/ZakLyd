@@ -20,12 +20,24 @@ namespace ZakLyd
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/moment-with-locales.js",
+                      "~/Scripts/bootstrap-datepicker.js",
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/bootstrap-touchspin.js",
+                      "~/Scripts/respond.js",
+                      "~/Scripts/jquery.polyglot.language.switcher.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                     "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-datepicker3.css",
+                      "~/Content/bootstrap-social.css",
+                      "~/Content/font-awesome.css",
+                      "~/Content/languages.css",
+                      "~/Content/polyglot-language-switcher.css",
+                      "~/Content/datepicker.css",
+                      "~/Content/bootstrap-touchspin.css",
                       "~/Content/site.css"));
+            BundleTable.EnableOptimizations = false;
         }
     }
 }

@@ -1,45 +1,125 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mon application ASP.NET</title>
+    <title>@ViewBag.Title - Haj&Omra</title>
     @Styles.Render("~/Content/css")
+    <!--<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css'>
+    -->
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!--<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script> 
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js'></script>-->
+
+    @*@Scripts.Render("~/bundles/jquery")*@
     @Scripts.Render("~/bundles/modernizr")
-
-</head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nom d'application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Accueil", "Index", "Home")</li>
-                    <li>@Html.ActionLink("À propos de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+</head>
+<body>
+    <header>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-5">
+                <!-- site logo goes here -->
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5" style="text-align:right">
+                <button type="button" class="btn btn-secondary">Connection</button>
+                <button type="button" class="btn btn-secondary">Inscription</button>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <div id="polyglotLanguageSwitcher" class="pull-right">
+                    <form action="#">
+                        <select id="polyglot-language-options">
+                            <option id="en" value="en" selected>English</option>
+                            <option id="fr" value="fr">Fran&ccedil;ais</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <content>
+        <div id="main">
+            @RenderBody()
+        </div>
+    </content>
+
+    <footer>
+        <div class="row footer-social">
+            <h6 class="footer-h6"> Suivez nous...</h6>
+            <!-- follow us -->
+            <a class="btn btn-social-icon btn-twitter">
+                <span class="fa fa-twitter"></span>
+            </a>
+            <a class="btn btn-social-icon btn-facebook">
+                <span class="fa fa-facebook"></span>
+            </a>
+            <a class="btn btn-social-icon btn-google">
+                <span class="fa fa-google"></span>
+            </a>
+            <a class="btn btn-social-icon btn-yahoo">
+                <span class="fa fa-yahoo"></span>
+            </a>
+        </div>
+        <hr />
+        <div class=" row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 footer-section">
+                <h6 class="footer-h6"> HajjOmra.Com </h6>
+                <ul>
+                    <li><a href="#">A propo de Haj Omra</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                    <li><a href="#">Mentions legales</a></li>
+                    <li><a href="#">Comment ça marche</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 footer-section">
+                <h6 class="footer-h6"> Le Hajj </h6>
+                <ul>
+                    <li><a href="#">Le guide du Haj</a></li>
+                    <li><a href="#">Préparer son haj</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 footer-section">
+                <h6 class="footer-h6"> La Omra </h6>
+                    <ul>
+                        <li><a href="#">Le guide de la Omra</a></li>
+                        <li><a href="#">Bien choisir son agence</a></li>
+                    </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#polyglotLanguageSwitcher').polyglotLanguageSwitcher({
+                effect: 'fade',
+                testMode: true,
+                onChange: function (evt) {
+                    alert("The selected language is: " + evt.selectedItem);
+                }
+                //                ,afterLoad: function(evt){
+                //                    alert("The selected language has been loaded");
+                //                },
+                //                beforeOpen: function(evt){
+                //                    alert("before open");
+                //                },
+                //                afterOpen: function(evt){
+                //                    alert("after open");
+                //                },
+                //                beforeClose: function(evt){
+                //                    alert("before close");
+                //                },
+                //                afterClose: function(evt){
+                //                    alert("after close");
+                //                }
+            });
+        });
+    </script>
+
 </body>
 </html>

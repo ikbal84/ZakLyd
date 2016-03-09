@@ -90,3 +90,4 @@ D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\bin\fr\Microsoft.Owin.Security.MicrosoftAcco
 D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\obj\Debug\ZakLyd.csprojResolveAssemblyReference.cache
 D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\obj\Debug\ZakLyd.dll
 D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\obj\Debug\ZakLyd.pdb
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\bin\Content\Images\Backgrounds\HaramBG.jpg

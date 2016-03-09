@@ -1,24 +1,74 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿body{
+    overflow-x:hidden;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+content{
+
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+#main{
+    height: 600px;
+    padding: 1% 1% 1% 1%;
+    background-image:url("Images/Backgrounds/HaramBG2.jpg");
+}
+.home-search{
+    padding-top:10%;
+}
+.home-search label{
+    color:white;
+}
+.search-date{
+    max-width:400px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+/* header */
+header{
+    /*background:url("Images/Backgrounds/HaramBG2.jpg");*/
+    background-color: #F2F2F2;
+    padding:1% 1% 1% 1%;
+    min-height:50px;
 }
+
+
+/* Footer */
+.footer-social{
+    text-align:center;
+}
+
+.footer-h6{
+    text-align:center;
+    font-size: x-large;
+    font-family: 'Script MT';
+    font-weight: bold;
+}
+
+footer{
+    background-color :#2E2E2E;
+    color: whitesmoke;
+    padding:2% 5% 5% 5%;
+}
+
+.btn-social-icon {
+    margin-left: 1%;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    text-align: center;
+    padding:0; 
+}
+
+.footer-section ul li {
+    margin-bottom: 1%;
+}
+
+.footer-section ul li a {
+    color: white;
+    margin-left: 5%;
+}
+
+.footer-section ul li a:hover {
+    color:white;
+    text-decoration: underline;
+}
+
