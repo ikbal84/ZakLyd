@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{B9C33AE6-C4C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{BD51059C-0BAA-4C18-8F0F-E01248BAE6C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZakLyd.Infrastructure.ElasticRepository", "ZakLyd.Infrastructure.ElasticRepository\ZakLyd.Infrastructure.ElasticRepository.csproj", "{763F0F82-F119-4D7F-B463-48215A0846E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZakLyd.Web.InterfaceEntities", "ZakLyd.Web.InterfaceEntities\ZakLyd.Web.InterfaceEntities.csproj", "{51D703C1-EBD1-4AEF-959C-594C0A6692AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{5865028C-DE64-4082-9DA6-2BAB1C1AD0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5865028C-DE64-4082-9DA6-2BAB1C1AD0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5865028C-DE64-4082-9DA6-2BAB1C1AD0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{763F0F82-F119-4D7F-B463-48215A0846E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{763F0F82-F119-4D7F-B463-48215A0846E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{763F0F82-F119-4D7F-B463-48215A0846E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{763F0F82-F119-4D7F-B463-48215A0846E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51D703C1-EBD1-4AEF-959C-594C0A6692AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51D703C1-EBD1-4AEF-959C-594C0A6692AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51D703C1-EBD1-4AEF-959C-594C0A6692AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51D703C1-EBD1-4AEF-959C-594C0A6692AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,5 +53,7 @@ Global
 		{6AB4C60F-E91F-449A-8813-3EAC9DAEE319} = {B9C33AE6-C4CE-4D84-B90E-A2AB95FDDA7D}
 		{1EC15610-E69C-4AA7-BC6F-B8573C21CD41} = {BD51059C-0BAA-4C18-8F0F-E01248BAE6C2}
 		{5865028C-DE64-4082-9DA6-2BAB1C1AD0DC} = {7B11ABF5-3BE4-4599-A573-C95D4ECCE9A8}
+		{763F0F82-F119-4D7F-B463-48215A0846E6} = {7B11ABF5-3BE4-4599-A573-C95D4ECCE9A8}
+		{51D703C1-EBD1-4AEF-959C-594C0A6692AE} = {B9C33AE6-C4CE-4D84-B90E-A2AB95FDDA7D}
 	EndGlobalSection
 EndGlobal

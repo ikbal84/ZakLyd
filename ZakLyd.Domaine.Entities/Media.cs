@@ -21,6 +21,10 @@ namespace ZakLyd.Domaine.Entities
         public string MediaTitle { get; set; }
         public string MediaDescription { get; set; }
         [Required]
+        public bool IsThumb { get; set; }
+        [Required]
+        public bool IsMain { get; set; }
+        [Required]
         [DataType(DataType.ImageUrl)]
         public string MediaUri { get; set; }
     }

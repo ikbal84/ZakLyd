@@ -1,0 +1,21 @@
+using System;
+using Nest;
+
+namespace ZakLyd.Web.InterfaceEntities
+{
+    public class Subscription
+    {
+        [Number(NumberType.Integer)]
+        public int SubscriptionId { get; set; }
+        [Number(NumberType.Integer)]
+        public int SubscriptionType { get; set; }
+        [Date(Format = "dd/mm/yyyy")]
+        public DateTime SubscriptionDate { get; set; }
+        [Date(Format = "dd/mm/yyyy")]
+        public DateTime SubscriptionStartDate { get; set; }
+        [Date(Format = "dd/mm/yyyy")]
+        public DateTime SubscriptionEndDate { get; set; }
+        [Number(NumberType.Integer)]
+        public int Status { get; set; }
+    }
+}

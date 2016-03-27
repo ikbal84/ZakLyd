@@ -9,7 +9,7 @@ namespace ZakLyd
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-1.12.0.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -24,6 +24,7 @@ namespace ZakLyd
                       "~/Scripts/bootstrap-datepicker.js",
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/bootstrap-touchspin.js",
+                      "~/Scripts/bootstrap-switch.js",
                       "~/Scripts/respond.js",
                       "~/Scripts/jquery.polyglot.language.switcher.js"));
 
@@ -36,6 +37,7 @@ namespace ZakLyd
                       "~/Content/polyglot-language-switcher.css",
                       "~/Content/datepicker.css",
                       "~/Content/bootstrap-touchspin.css",
+                      "~/Content/bootstrap-switch/bootstrap2/bootstrap-switch.css",
                       "~/Content/site.css"));
             BundleTable.EnableOptimizations = false;
         }
