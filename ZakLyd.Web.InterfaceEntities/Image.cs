@@ -15,5 +15,5 @@ namespace ZakLyd.Web.InterfaceEntities
         [Boolean]
         public bool IsMain { get; set; }
     }
-    }
+    
 }

@@ -26,6 +26,8 @@ namespace ZakLyd.Web.InterfaceEntities
         public DateTime StartBookingDate { get; set; }
         [Date(Format = "dd/mm/yyyy")]
         public DateTime EndBookingDate { get; set; }
+
+        public HashSet<Pricing> Pricings { get; set; }
         [Nested(IncludeInParent = true)]
         public AgencySummary AgencySummary { get; set; }
 
@@ -44,4 +46,6 @@ namespace ZakLyd.Web.InterfaceEntities
         public AirPlaneInfo ArrivalInfo { get; set; }
 
     }
+
+
 }

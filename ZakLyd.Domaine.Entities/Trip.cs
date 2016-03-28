@@ -19,6 +19,18 @@ namespace ZakLyd.Domaine.Entities
         public DateTime DepartureDate { get; set; }
         [Required]
         public DateTime ArrivalDate { get; set; }
+        [Required]
+        public string DepartureCity { get; set; }
+        [Required]
+        public string DepartureAiroport { get; set; }
+        [Required]
+        public string DepartureCountry { get; set; }
+        [Required]
+        public string ArrivalCity { get; set; }
+        [Required]
+        public string ArrivalAiroport { get; set; }
+        [Required]
+        public string ArrivalCountry { get; set; }
         public ICollection<Step> StepList { get; set; }
     }
 }

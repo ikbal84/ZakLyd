@@ -30,6 +30,7 @@ namespace ZakLyd.Domaine.Entities
         public Agency Agency { get; set; }
         [Required]
         public long AgentId { get; set; }
+        public ICollection<Pricing> PricingList { get; set; }
         public ICollection<Media> MediaList { get; set; }
         public ICollection<Properties> PropertyList { get; set; }
         public ICollection<Hotel> HotelList { get; set; }

@@ -21,6 +21,10 @@ namespace ZakLyd.Infrastructure.ElasticRepository
             _elasticNodes = elasticNodeList.Select(strNode => new Uri(strNode)).ToList();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public ElasticRepository Connect()
         {
             if (_elasticNodes.Any())
@@ -51,7 +55,42 @@ namespace ZakLyd.Infrastructure.ElasticRepository
             return this;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="docId"></param>
+        /// <param name="index"></param>
+        /// <param name="docType"></param>
+        /// <returns></returns>
+        public IGetResponse<T> GetDocumentById<T>(int docId, string index, string docType) where T : InterfaceEntity
+        {
+            var request = new GetRequest("myindex", "mytype", docId);
 
+            return Client.Get<T>(request);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="docId"></param>
+        /// <param name="index"></param>
+        /// <param name="docType"></param>
+        /// <returns></returns>
+        public Task<IGetResponse<T>> GetDocumentByIdAsync<T>(int docId, string index, string docType) where T : InterfaceEntity
+        {
+            var request = new GetRequest("myindex", "mytype", docId);
+
+            return Client.GetAsync<T>(request);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public SearchResult<T> Query<T>(SearchRequest request) where T : InterfaceEntity
         {
             SearchResult<T> searchResult = new SearchResult<T>();
@@ -72,6 +111,12 @@ namespace ZakLyd.Infrastructure.ElasticRepository
             return searchResult;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public async Task<SearchResult<T>> QueryAsync<T>(SearchRequest request) where T : InterfaceEntity
         {
             var searchResult = new SearchResult<T>();
@@ -92,6 +137,9 @@ namespace ZakLyd.Infrastructure.ElasticRepository
             return searchResult;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Dispose()
         {
             Client.ConnectionSettings.Connection.Dispose();
