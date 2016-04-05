@@ -16,7 +16,8 @@ namespace ZakLyd.Controllers
         public ActionResult Index()
         {
             
-            return View(new ViewModelFactory().CreateHomeViewModel());
+           // return View(new ViewModelFactory().CreateHomeViewModel());
+            return View();
         }
 
         public ActionResult About()
