@@ -8,7 +8,7 @@ using Nest;
 namespace ZakLyd.Web.InterfaceEntities
 {
     [ElasticsearchType(IdProperty = "AnnouncementId", Name = "Announcement")]
-    public class Announcement
+    public class InterfaceAnnouncement
     {
         [Number(NumberType.Integer)]
         public int AnnouncementId { get; set; }
@@ -27,23 +27,23 @@ namespace ZakLyd.Web.InterfaceEntities
         [Date(Format = "dd/mm/yyyy")]
         public DateTime EndBookingDate { get; set; }
 
-        public HashSet<Pricing> Pricings { get; set; }
+        public HashSet<InterfacePricing> Pricings { get; set; }
         [Nested(IncludeInParent = true)]
-        public AgencySummary AgencySummary { get; set; }
+        public InterfaceAgencySummary AgencySummary { get; set; }
 
         [Nested(IncludeInParent = true)]
-        public HashSet<Image> Images { get; set; }
+        public HashSet<InterfaceImage> Images { get; set; }
 
         [Nested(IncludeInParent = true)]
-        public HashSet<EntityProperties> Properties { get; set; }
+        public HashSet<InterfaceEntityProperties> Properties { get; set; }
 
         [Nested(IncludeInParent = true)]
-        public HashSet<HotelSummary> HotelSummaries { get; set; }
+        public HashSet<InterfaceHotelSummary> HotelSummaries { get; set; }
 
         [Nested(IncludeInParent = true)]
-        public AirPlaneInfo DepartureInfo { get; set; }
+        public InterfaceAirPlaneInfo DepartureInfo { get; set; }
         [Nested(IncludeInParent = true)]
-        public AirPlaneInfo ArrivalInfo { get; set; }
+        public InterfaceAirPlaneInfo ArrivalInfo { get; set; }
 
     }
 

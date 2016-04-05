@@ -173,6 +173,8 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Factory\Abstract\ViewModelAbstractFactory.cs" />
+    <Compile Include="Factory\ViewModelFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -180,13 +182,17 @@
     <Compile Include="Helpers\ConfigurationHelper.cs" />
     <Compile Include="Helpers\CultureHelper.cs" />
     <Compile Include="Helpers\LabelsHelper.cs" />
+    <Compile Include="Models\ZakLydViewModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdvancedSearchViewModel.cs" />
+    <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\SearchViewModel.cs" />
-    <Compile Include="Models\SortViewModel.cs" />
+    <Compile Include="Models\PromoModel.cs" />
+    <Compile Include="Models\SearchModel.cs" />
+    <Compile Include="Models\SortModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ElasticService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utils\ObjectToDictionnary.cs" />
   </ItemGroup>
@@ -379,6 +385,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\FlushCache.cshtml" />
+    <Content Include="Views\Shared\SearchPartialView.cshtml" />
+    <Content Include="Views\Shared\PromoListPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -396,6 +404,10 @@
     <ProjectReference Include="..\ZakLyd.Infrastructure.Repository\ZakLyd.Infrastructure.DAL.csproj">
       <Project>{5865028c-de64-4082-9da6-2bab1c1ad0dc}</Project>
       <Name>ZakLyd.Infrastructure.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZakLyd.Web.InterfaceEntities\ZakLyd.Web.InterfaceEntities.csproj">
+      <Project>{51d703c1-ebd1-4aef-959c-594c0a6692ae}</Project>
+      <Name>ZakLyd.Web.InterfaceEntities</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -3,7 +3,7 @@ using Nest;
 
 namespace ZakLyd.Web.InterfaceEntities
 {
-    public class HotelDetail
+    public class InterfaceHotelDetail
     {
         [Number(NumberType.Long)]
         public long HotelDetailId { get; set; }
@@ -14,6 +14,6 @@ namespace ZakLyd.Web.InterfaceEntities
         [String]
         public string Description { get; set; }
         [Nested(IncludeInParent = true)]
-        public HashSet<Image> MediaList { get; set; }
+        public HashSet<InterfaceImage> MediaList { get; set; }
     }
 }

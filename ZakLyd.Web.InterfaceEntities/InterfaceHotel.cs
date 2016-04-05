@@ -8,7 +8,7 @@ using Nest;
 namespace ZakLyd.Web.InterfaceEntities
 {
     [ElasticsearchType(IdProperty = "HotelId", Name = "Hotel")]
-    public class Hotel
+    public class InterfaceHotel
     {
         [Number(NumberType.Long)]
         public long HotelId { get; set; }
@@ -21,7 +21,7 @@ namespace ZakLyd.Web.InterfaceEntities
         [String]
         public string Description { get; set; }
         [Nested(IncludeInParent = true)]
-        public Address Address { get; set; }
+        public InterfaceAddress Address { get; set; }
         [String]
         public string City { get; set; }
         [Number(NumberType.Long)]
@@ -29,8 +29,8 @@ namespace ZakLyd.Web.InterfaceEntities
         [Number(NumberType.Long)]
         public long Longitude { get; set; }
         [Nested(IncludeInParent = true)]
-        public HashSet<EntityProperties> PropertyList { get; set; }
-        public HashSet<HotelDetail> HotelDetailList { get; set; }
-        public HashSet<Image> MediaList { get; set; }
+        public HashSet<InterfaceEntityProperties> PropertyList { get; set; }
+        public HashSet<InterfaceHotelDetail> HotelDetailList { get; set; }
+        public HashSet<InterfaceImage> MediaList { get; set; }
     }
 }

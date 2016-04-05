@@ -2,7 +2,7 @@
 
 namespace ZakLyd.Web.InterfaceEntities
 {
-    public class EntityProperties
+    public class InterfaceEntityProperties
     {
         [String]
         public string Key { get; set; }

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ZakLyd.Models.PromoModel>
+
+
+<div class="row home-promotion-wraper">
+
+    @foreach (var item in Model)
+    {
+
+        <div id="item.PromoName" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="home-promotion-content">
+                <div class="promo-image">
+                    <a href="@item.AnnouncementLink">
+                        <img src="@item.PromotionImageUrl" title="@item.PromotionImageTitle" alt=""/>
+                        <!-- image hover: item.PromoText -->
+                    </a>
+                </div>
+                <div>
+                    <del>@item.RefPrice</del> | item.Price
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+    <!--
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="home-promotion-content">
+            <div class="promo-image">
+                <a href="#">
+                    <img src="~/Content/Images/test/promo1.jpg" title="promo1" alt=""/>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="home-promotion-content">
+            <div class="promo-image">
+                <a href="#">
+                    <img src="~/Content/Images/test/promo2.jpg" title="promo1" alt=""/>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="home-promotion-content">
+            <div class="promo-image">
+                <a href="#"><img src="~/Content/Images/test/promo1.jpg" title="promo1"/></a>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+

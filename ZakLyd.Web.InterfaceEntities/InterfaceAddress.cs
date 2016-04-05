@@ -2,7 +2,7 @@
 
 namespace ZakLyd.Web.InterfaceEntities
 {
-    public class Address
+    public class InterfaceAddress
     {
         [Number(NumberType.Integer)]
         public int AddressId { get; set; }

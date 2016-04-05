@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ZakLyd.Models
 {
-    public class AdvancedSearchViewModel : SearchViewModel
+    public class AdvancedSearchViewModel : SearchModel
     {
         public string DepartureCity { get; set; }
         public string DepartureCountry { get; set; }

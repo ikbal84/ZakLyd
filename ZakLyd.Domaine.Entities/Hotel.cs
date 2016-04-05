@@ -20,7 +20,7 @@ namespace ZakLyd.Domaine.Entities
         [Required]
         [DataType(DataType.Html)]
         public string Description { get; set; }
-        public string Address { get; set; }
+        public Address Address { get; set; }
         public string City { get; set; }
         public long Latitude { get; set; }
         public long Longitude { get; set; }

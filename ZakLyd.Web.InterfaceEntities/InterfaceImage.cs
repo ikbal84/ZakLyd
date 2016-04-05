@@ -2,7 +2,7 @@ using Nest;
 
 namespace ZakLyd.Web.InterfaceEntities
 {
-    public class Image
+    public class InterfaceImage
     {
         [String]
         public string Title { get; set; }

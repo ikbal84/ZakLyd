@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace ZakLyd.Web.InterfaceEntities
 {
     [ElasticsearchType(IdProperty = "AgencyId", Name = "Agency")]
-    public class Agency: InterfaceEntity
+    public class InterfaceAgency: InterfaceEntity
     {
         [String]
         public Guid AgencyId { get; set; }
@@ -40,10 +40,10 @@ namespace ZakLyd.Web.InterfaceEntities
         public string Email3 { get; set; }
 
         [Nested(IncludeInParent = true)]
-        public Address Address { get; set; }
+        public InterfaceAddress Address { get; set; }
 
         [Nested(IncludeInParent = true)]
-        public Subscription Subscription { get; set; }
+        public InterfaceSubscription Subscription { get; set; }
 
     }
 }

@@ -52,20 +52,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
-    <Compile Include="Agency.cs" />
-    <Compile Include="AgencySummary.cs" />
-    <Compile Include="AirPlaneInfo.cs" />
-    <Compile Include="Announcement.cs" />
-    <Compile Include="EntityProperties.cs" />
-    <Compile Include="Hotel.cs" />
-    <Compile Include="HotelDetail.cs" />
-    <Compile Include="HotelSummary.cs" />
-    <Compile Include="Image.cs" />
+    <Compile Include="InterfaceAddress.cs" />
+    <Compile Include="InterfaceAgency.cs" />
+    <Compile Include="InterfaceAgencySummary.cs" />
+    <Compile Include="InterfaceAirPlaneInfo.cs" />
+    <Compile Include="InterfaceAnnouncement.cs" />
+    <Compile Include="InterfaceEntityProperties.cs" />
+    <Compile Include="InterfaceHotel.cs" />
+    <Compile Include="InterfaceHotelDetail.cs" />
+    <Compile Include="InterfaceHotelSummary.cs" />
+    <Compile Include="InterfaceImage.cs" />
     <Compile Include="InterfaceEntity.cs" />
-    <Compile Include="Pricing.cs" />
+    <Compile Include="InterfacePricing.cs" />
+    <Compile Include="InterfacePromotion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Subscription.cs" />
+    <Compile Include="InterfaceSubscription.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

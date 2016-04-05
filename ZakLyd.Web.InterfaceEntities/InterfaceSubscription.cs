@@ -3,7 +3,7 @@ using Nest;
 
 namespace ZakLyd.Web.InterfaceEntities
 {
-    public class Subscription
+    public class InterfaceSubscription
     {
         [Number(NumberType.Integer)]
         public int SubscriptionId { get; set; }

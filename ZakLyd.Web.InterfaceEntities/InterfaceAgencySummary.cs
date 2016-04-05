@@ -3,7 +3,7 @@ using Nest;
 
 namespace ZakLyd.Web.InterfaceEntities
 {
-    public class AgencySummary
+    public class InterfaceAgencySummary
     {
         [String]
         public Guid AgencyId { get; set; }
@@ -12,6 +12,6 @@ namespace ZakLyd.Web.InterfaceEntities
         [String]
         public string City { get; set; }
         [Nested(IncludeInParent = true)]
-        public Image Image { get; set; }
+        public InterfaceImage Image { get; set; }
     }
 }

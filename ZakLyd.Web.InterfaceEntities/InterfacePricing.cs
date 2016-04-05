@@ -1,15 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using Nest;
+﻿using Nest;
+using System;
 
 namespace ZakLyd.Web.InterfaceEntities
 {
-    public class AirPlaneInfo
+    public class InterfacePricing
     {
-        [Number(NumberType.Integer)]
-        public int AirPlaneInfoId { get; set; }
+        public long PricingId { get; set; }
+
+        public DateTime StartDate { get; set; }
+
+        public DateTime EndDate { get; set; }
+
         [String]
-        public string AirPlaneInfoName { get; set; }
+        public string RoomType { get; set; }
+        [Number(NumberType.Integer)]
+        public int Capacity { get; set; }
+
         [Date(Format = "dd/mm/yyyy")]
         public DateTime DepartureDate { get; set; }
         [Date(Format = "dd/mm/yyyy")]
@@ -27,6 +33,14 @@ namespace ZakLyd.Web.InterfaceEntities
         [String]
         public string ArrivalCountry { get; set; }
 
-        public HashSet<string> Steps { get; set; }
+        public float FreeTaxPrice { get; set; }
+
+        public float VatRate { get; set; }
+
+        public float Price { get; set; }
+
+        public string Currency { get; set; }
+        public int? InitialStock { get; set; }
+        public int? AvailableStock { get; set; }
     }
 }

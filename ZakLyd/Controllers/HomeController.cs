@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using ZakLyd.Caching;
 using ZakLyd.Domaine.Entities;
+using ZakLyd.Factory;
 using ZakLyd.Helpers;
 
 namespace ZakLyd.Controllers
@@ -14,8 +15,8 @@ namespace ZakLyd.Controllers
     {
         public ActionResult Index()
         {
-            LabelsHelper.GetLabel("Test.test0", "fr");
-            return View();
+            
+            return View(new ViewModelFactory().CreateHomeViewModel());
         }
 
         public ActionResult About()
