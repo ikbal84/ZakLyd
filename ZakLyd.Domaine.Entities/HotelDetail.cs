@@ -20,7 +20,7 @@ namespace ZakLyd.Domaine.Entities
         [DataType(DataType.Html)]
         public string Description { get; set; }
         public ICollection<Media> MediaList { get; set; }
-        public ICollection<Announcment> AnnouncmentList { get; set; }
+        public ICollection<Announcement> AnnouncmentList { get; set; }
         public ICollection<HotelDetailHistory> HistoryList { get; set; }
     }
 }

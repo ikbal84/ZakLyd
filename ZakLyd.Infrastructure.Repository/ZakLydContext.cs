@@ -22,7 +22,7 @@ namespace ZakLyd.Infrastructure.DAL
         public DbSet<Address> Address { get; set; }
         public DbSet<Media> Media { get; set; }
         public DbSet<AirPlaneInformation> AirPlaneInformation { get; set; }
-        public DbSet<Announcment> Announcment { get; set; }
+        public DbSet<Announcement> Announcement { get; set; }
         public DbSet<Currency> Currency { get; set; }
         public DbSet<Hotel> Hotel { get; set; }
         public DbSet<HotelDetail> HotelDetail { get; set; }
@@ -49,7 +49,7 @@ namespace ZakLyd.Infrastructure.DAL
         //History Tables
         public DbSet<AgencyHistory> AgencyHistory { get; set; }
         public DbSet<AgentHistory> AgentHistory { get; set; }
-        public DbSet<AnnouncmentHistory> AnnouncmentHistory { get; set; }
+        public DbSet<AnnouncementHistory> AnnouncementHistory { get; set; }
         public DbSet<HotelDetailHistory> HotelDetailHistory { get; set; }
         public DbSet<HotelHistory> HotelHistory { get; set; }
 
@@ -62,22 +62,22 @@ namespace ZakLyd.Infrastructure.DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Hotel>()
-                .HasMany(p => p.AnnouncmentList)
+                .HasMany(p => p.AnnouncementList)
                 .WithMany(t => t.HotelList)
                 .Map(mc =>
                 {
-                    mc.ToTable("AnnouncmentHotel", "zaklyd");
-                    mc.MapLeftKey("AnnouncmentId");
+                    mc.ToTable("AnnouncementHotel", "zaklyd");
+                    mc.MapLeftKey("AnnouncementId");
                     mc.MapRightKey("HotelId");
                 });
 
             modelBuilder.Entity<HotelDetail>()
-                .HasMany(p => p.AnnouncmentList)
+                .HasMany(p => p.AnnouncementList)
                 .WithMany(t => t.HotelDetailList)
                 .Map(mc =>
                 {
-                    mc.ToTable("AnnouncmentHotelDetail", "zaklyd");
-                    mc.MapLeftKey("AnnouncmentId");
+                    mc.ToTable("AnnouncementHotelDetail", "zaklyd");
+                    mc.MapLeftKey("AnnouncementId");
                     mc.MapRightKey("HotelDetailId");
                 });
 

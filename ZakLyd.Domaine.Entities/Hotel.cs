@@ -26,7 +26,7 @@ namespace ZakLyd.Domaine.Entities
         public ICollection<Properties> PropertyList { get; set; }
         public ICollection<HotelDetail> HotelDetailList { get; set; }
         public ICollection<Media> MediaList { get; set; }
-        public ICollection<Announcment> AnnouncmentList { get; set; }
+        public ICollection<Announcement> AnnouncementList { get; set; }
         public ICollection<HotelHistory> HistoryList { get; set; }
     }
 }

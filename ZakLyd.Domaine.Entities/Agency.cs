@@ -47,7 +47,7 @@ namespace ZakLyd.Domaine.Entities
         public Subscription Subscription { get; set; }
 
         public ICollection<Media> MediaList { get; set; }
-        public ICollection<Announcment> AnnouncementList { get; set; }
+        public ICollection<Announcement> AnnouncementList { get; set; }
         public ICollection<AgencyAccountHistory> AgencyAccountHistory { get; set; }
         public ICollection<CommercialOffer> CommercialOffersListe { get; set; }
         public ICollection<Agent> AgentList { get; set; }

@@ -13,7 +13,7 @@ namespace ZakLyd.Domaine.Entities
         [Required]
         public string AirPlaneInfoName { get; set; }
         [Required]
-        public Announcment Announcment { get; set; }
+        public Announcement Announcement { get; set; }
         public Trip Aller { get; set; }
         public Trip Retour { get; set; }
     }

@@ -60,7 +60,7 @@
     <Compile Include="History\AgencyHistory.cs" />
     <Compile Include="Agent.cs" />
     <Compile Include="AirPlaneInformation.cs" />
-    <Compile Include="Announcment.cs" />
+    <Compile Include="Announcement.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="CommercialOffer.cs" />
     <Compile Include="Currency.cs" />
@@ -74,7 +74,7 @@
     <Compile Include="enum\SubscriptionStatus.cs" />
     <Compile Include="enum\SubscriptionType.cs" />
     <Compile Include="History\AgentHistory.cs" />
-    <Compile Include="History\AnnouncmentHistory.cs" />
+    <Compile Include="History\AnnouncementHistory.cs" />
     <Compile Include="History\HotelDetailHistory.cs" />
     <Compile Include="History\HotelHistory.cs" />
     <Compile Include="HotelDetail.cs" />
