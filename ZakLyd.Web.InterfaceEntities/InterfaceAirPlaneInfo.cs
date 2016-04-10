@@ -7,7 +7,7 @@ namespace ZakLyd.Web.InterfaceEntities
     public class InterfaceAirPlaneInfo
     {
         [Number(NumberType.Integer)]
-        public int AirPlaneInfoId { get; set; }
+        public long AirPlaneInfoId { get; set; }
         [String]
         public string AirPlaneInfoName { get; set; }
         [Date(Format = "dd/mm/yyyy")]

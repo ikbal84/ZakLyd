@@ -11,7 +11,7 @@ namespace ZakLyd.Web.InterfaceEntities
     public class InterfaceAnnouncement
     {
         [Number(NumberType.Integer)]
-        public int AnnouncementId { get; set; }
+        public long AnnouncementId { get; set; }
         [String]
         public string Title { get; set; }
         [String]
@@ -23,9 +23,9 @@ namespace ZakLyd.Web.InterfaceEntities
         [Date(Format = "dd/mm/yyyy")]
         public DateTime EndDate { get; set; }
         [Date(Format = "dd/mm/yyyy")]
-        public DateTime StartBookingDate { get; set; }
+        public DateTime? StartBookingDate { get; set; }
         [Date(Format = "dd/mm/yyyy")]
-        public DateTime EndBookingDate { get; set; }
+        public DateTime? EndBookingDate { get; set; }
 
         public HashSet<InterfacePricing> Pricings { get; set; }
         [Nested(IncludeInParent = true)]

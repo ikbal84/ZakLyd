@@ -6,7 +6,7 @@ namespace ZakLyd.Web.InterfaceEntities
     public class InterfaceSubscription
     {
         [Number(NumberType.Integer)]
-        public int SubscriptionId { get; set; }
+        public long SubscriptionId { get; set; }
         [Number(NumberType.Integer)]
         public int SubscriptionType { get; set; }
         [Date(Format = "dd/mm/yyyy")]
@@ -14,7 +14,7 @@ namespace ZakLyd.Web.InterfaceEntities
         [Date(Format = "dd/mm/yyyy")]
         public DateTime SubscriptionStartDate { get; set; }
         [Date(Format = "dd/mm/yyyy")]
-        public DateTime SubscriptionEndDate { get; set; }
+        public DateTime? SubscriptionEndDate { get; set; }
         [Number(NumberType.Integer)]
         public int Status { get; set; }
     }

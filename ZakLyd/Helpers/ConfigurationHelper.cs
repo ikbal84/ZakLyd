@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using ZakLyd.Caching;
 using ZakLyd.Configuration;
 
@@ -9,52 +7,48 @@ namespace ZakLyd.Helpers
 {
     public static class ConfigurationHelper
     {
+        private static readonly CacheManager CacheManager = new CacheManager();
+        private static readonly AppConfigurationManager ConfigurationManager = new AppConfigurationManager();
+
         public static string GetConfigurationValueByKey(string key)
         {
-            if (String.IsNullOrEmpty(key))
+            if (string.IsNullOrEmpty(key))
             {
-                return String.Empty;
+                return string.Empty;
             }
 
-            CacheManager cacheManager = new CacheManager();
+            var confValue = CacheManager.GetCache(key);
 
-            var confValue = cacheManager.GetCache(key);
+            if (confValue != null) return confValue.ToString();
+
             
-            if (confValue== null)
-            {
-                ConfigurationManager confManager = new ConfigurationManager();
-                var configs = confManager.GetConfigurations();
+            var configs = ConfigurationManager.GetConfigurations();
 
-                string configValue = String.Empty;
-                if (configs.TryGetValue(key, out configValue))
-                {
-                    return configValue;
-                }
-                else
-                {
-                    return GetConfigurationFromFile(key);
-                }
-            }
-            else
-            {
-                return confValue.ToString();
-            }
+            string configValue;
 
-
+            return configs.TryGetValue(key, out configValue) ? configValue : null;
         }
 
-        public static string GetConfigurationFromFile(string key)
+
+        public static IDictionary<string, string> GetConfigurationValuesByfamily(string family)
         {
-            try
+            if (string.IsNullOrEmpty(family))
             {
-                return System.Configuration.ConfigurationManager.AppSettings[key];
+                return null;
             }
-            catch(Exception e)
-            {
-                return String.Empty;
-            }
-            
 
+            var confValues = CacheManager.GetCacheForFamilly(family);
+
+            if (confValues != null) return confValues.ToDictionary(c => c.Key, c => (string)c.Value);
+
+            var confValuesFromRepo = ConfigurationManager.GetConfigurationValuesByFamily(family);
+
+            if (confValuesFromRepo == null) return null;
+
+            CacheManager.SetCache(confValuesFromRepo);
+
+            return confValuesFromRepo;
         }
+
     }
 }

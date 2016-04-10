@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ZakLyd.Domaine.Entities.Configuration;
 using ZakLyd.Infrastructure.DAL;
 
 namespace ZakLyd.Infrastructure.Repositories
@@ -22,6 +23,36 @@ namespace ZakLyd.Infrastructure.Repositories
             }
 
             return result;
+        }
+
+
+        public string GetConfigurationByKey(string key)
+        {
+            IQueryable<Configuration> queryResult;
+
+            using (var dbContext = new ZakLydContext())
+            {
+                queryResult =
+                    dbContext.Configuration.Where(
+                        c => c.ConfigurationKey.Equals(key, StringComparison.OrdinalIgnoreCase));
+            }
+
+            return queryResult.Any() ? queryResult.First().ConfigurationValue : string.Empty;
+             
+        }
+
+        public IDictionary<string,string> GetConfigurationByFamilly(string family)
+        {
+            IQueryable<Configuration> queryResult;
+
+            using (var dbContext = new ZakLydContext())
+            {
+                queryResult =
+                    dbContext.Configuration.Where(
+                        c => c.ConfigurationKey.ToLower().StartsWith(family.ToLower()));
+            }
+
+            return queryResult.Any() ? queryResult.ToDictionary(c=>c.ConfigurationKey, c=> c.ConfigurationValue) : null;
         }
 
         public IDictionary<string, string> GetAllConfigurations()

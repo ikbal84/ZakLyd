@@ -91,3 +91,11 @@ D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\obj\Debug\ZakLyd.csprojResolveAssemblyRefere
 D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\obj\Debug\ZakLyd.dll
 D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\obj\Debug\ZakLyd.pdb
 D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\bin\Content\Images\Backgrounds\HaramBG.jpg
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\bin\ZakLyd.Web.InterfaceEntities.dll
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\bin\Nest.dll
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\bin\Elasticsearch.Net.dll
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\bin\ZakLyd.Web.InterfaceEntities.pdb
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\bin\Nest.pdb
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\bin\Nest.xml
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\bin\Elasticsearch.Net.pdb
+D:\ZAKLYD\sources\Dev\ZakLyd\ZakLyd\bin\Elasticsearch.Net.xml

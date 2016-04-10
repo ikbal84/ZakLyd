@@ -13,6 +13,7 @@ namespace ZakLyd.Web.InterfaceEntities
 
         [String]
         public string RoomType { get; set; }
+
         [Number(NumberType.Integer)]
         public int Capacity { get; set; }
 

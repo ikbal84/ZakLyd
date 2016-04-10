@@ -168,7 +168,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Configuration\ConfigurationManager.cs" />
+    <Compile Include="Configuration\AppConfigurationManager.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -400,6 +400,10 @@
     <ProjectReference Include="..\ZakLyd.Domaine.Entities\ZakLyd.Domaine.Entities.csproj">
       <Project>{1ec15610-e69c-4aa7-bc6f-b8573c21cd41}</Project>
       <Name>ZakLyd.Domaine.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZakLyd.Infrastructure.ElasticRepository\ZakLyd.Infrastructure.ElasticRepository.csproj">
+      <Project>{763f0f82-f119-4d7f-b463-48215a0846e6}</Project>
+      <Name>ZakLyd.Infrastructure.ElasticRepository</Name>
     </ProjectReference>
     <ProjectReference Include="..\ZakLyd.Infrastructure.Repository\ZakLyd.Infrastructure.DAL.csproj">
       <Project>{5865028c-de64-4082-9da6-2bab1c1ad0dc}</Project>

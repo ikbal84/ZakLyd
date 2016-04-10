@@ -29,7 +29,7 @@ namespace ZakLyd.Helpers
 
             if (valueFromCache == null)
             {
-                ConfigurationManager confManager = new ConfigurationManager();
+                AppConfigurationManager confManager = new AppConfigurationManager();
                 string LabelFamily = labelKey.Split('.')[0];
                 var familyLabels = confManager.GetLabelsByFamily(LabelFamily, culture);
             

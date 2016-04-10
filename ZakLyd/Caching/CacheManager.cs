@@ -8,13 +8,21 @@ namespace ZakLyd.Caching
 {
     public class CacheManager
     {
-        private MemoryCache _cache = MemoryCache.Default;
+        private readonly MemoryCache _cache = MemoryCache.Default;
+
         public object GetCache(string key)
         {
             return _cache[key];
         }
 
-        public void SetCache(string key, Object value, int cacheTime = 1500)
+        public IDictionary<string, object> GetCacheForFamilly(string familly)
+        {
+            var result = _cache.Where(cache => cache.Key.ToLower().StartsWith(familly.ToLower()));
+
+            return result.Any() ? result.ToDictionary(c => c.Key, c=> c.Value) : null;
+        }
+
+        public void SetCache(string key, object value, int cacheTime = 1500)
         {
             _cache.Add(new CacheItem(key, value), SetCachePolicy());
         }
@@ -33,20 +41,21 @@ namespace ZakLyd.Caching
             try
             {
                 _cache.Dispose();
-                return Tuple.Create<bool, string>(true, string.Empty);
+                return Tuple.Create(true, string.Empty);
             }
             catch(Exception e)
             {
-                return Tuple.Create<bool, string>(false, e.Message);
+                return Tuple.Create(false, e.Message);
             }
             
         }
 
         private CacheItemPolicy SetCachePolicy(int cacheTime = 1500)
         {
-            CacheItemPolicy policy = new CacheItemPolicy();
-            policy.AbsoluteExpiration = DateTime.Now + TimeSpan.FromMinutes(cacheTime);
-            return policy;
+            return new CacheItemPolicy
+            {
+                AbsoluteExpiration = DateTime.Now + TimeSpan.FromMinutes(cacheTime)
+            };
         }
     }
 }

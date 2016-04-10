@@ -8,16 +8,22 @@ using ZakLyd.Caching;
 using ZakLyd.Domaine.Entities;
 using ZakLyd.Factory;
 using ZakLyd.Helpers;
+using ZakLyd.Services;
 
 namespace ZakLyd.Controllers
 {
     public class HomeController : BaseController
     {
+        private ElasticService elasticService;
+
+        public HomeController() : base()
+        {
+            elasticService = new ElasticService();
+        }
         public ActionResult Index()
         {
-            
-           // return View(new ViewModelFactory().CreateHomeViewModel());
-            return View();
+            var promoList = elasticService.GetPromoList();
+            return View(new ViewModelFactory().CreateHomeViewModel());
         }
 
         public ActionResult About()

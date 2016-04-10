@@ -5,7 +5,7 @@ namespace ZakLyd.Web.InterfaceEntities
     public class InterfaceAddress
     {
         [Number(NumberType.Integer)]
-        public int AddressId { get; set; }
+        public long AddressId { get; set; }
         [String]
         public string AddressValue { get; set; }
         [String]
